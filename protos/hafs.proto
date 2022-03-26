@@ -1,0 +1,21 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+// option java_multiple_files = true;
+// option java_package = "io.grpc.examples.helloworld";
+// option java_outer_classname = "HAProto";
+// option objc_class_prefix = "HLW";
+
+package hafs;
+
+service HAFS {
+    rpc heartBeat(BeatReq) returns (BeatResp);
+}
+
+message BeatReq {
+    string req = 1;
+}
+
+message BeatResp {
+    int32 resp = 1;
+}
